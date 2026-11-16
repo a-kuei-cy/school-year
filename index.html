@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=2.5" />
 </head>
 <body>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
@@ -48,7 +48,7 @@
       <button class="tab hidden" data-view="usersView" id="usersTab">帳號管理</button>
     </nav>
 
-    <main class="container">
+    <main class="container"><div id="roleGuidance" class="role-guidance" role="note"></div>
       <section id="recordsView" class="view">
         <div class="panel">
           <div class="panel-head"><div><h2>會議紀錄查詢</h2><p>教師可檢視並編修所屬學年；處室主任與校長可檢視與回覆。</p></div><button class="btn primary" id="newBtn">＋ 新增會議紀錄</button></div>
@@ -122,6 +122,6 @@
       <form id="userForm" class="dialog-form"><input id="editUsernameOriginal" type="hidden"><label>登入帳號<input id="accountUsername" required pattern="[a-zA-Z0-9._-]{3,40}" placeholder="例如 grade1"></label><label>姓名 / 顯示名稱<input id="accountName" required placeholder="例如 一年級學年主任"></label><label>角色<select id="accountRole"><option value="teacher">教師</option><option value="academic">教務主任</option><option value="student_affairs">學務主任</option><option value="general_affairs">總務主任</option><option value="counseling">輔導主任</option><option value="principal">校長</option><option value="admin">系統管理者</option></select></label><label id="accountGradeWrap">學年<select id="accountGrade"><option value="1">一年級</option><option value="2">二年級</option><option value="3">三年級</option><option value="4">四年級</option><option value="5">五年級</option><option value="6">六年級</option></select></label><label>初始 / 重設密碼<input id="accountPassword" type="password" minlength="8" placeholder="新帳號必填；既有帳號留白不變更"></label><label class="check-row"><input id="accountActive" type="checkbox" checked>啟用帳號</label><div class="form-note">新帳號首次登入會被要求修改密碼。</div><button class="btn primary" type="submit">儲存帳號</button></form>
     </dialog>
   </div>
-  <script src="config.js"></script><script src="app.js"></script>
+  <script src="config.js?v=2.5"></script><script src="app.js?v=2.5"></script>
 </body>
 </html>
